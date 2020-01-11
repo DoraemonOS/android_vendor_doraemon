@@ -82,7 +82,7 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            lunch aosp_$target-$variant
+            lunch doraemon_$target-$variant
         fi
     fi
     return $?
