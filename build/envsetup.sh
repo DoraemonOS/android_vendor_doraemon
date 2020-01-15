@@ -341,7 +341,7 @@ function installboot()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 > /dev/null
     adb wait-for-online remount
-    if (adb shell getprop org.pixelexperience.device | grep -q "$CUSTOM_BUILD");
+    if (adb shell getprop ro.doraemon.device | grep -q "$CUSTOM_BUILD");
     then
         adb push $OUT/boot.img /cache/
         if [ -e "$OUT/system/lib/modules/*" ];
@@ -390,7 +390,7 @@ function installrecovery()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 >> /dev/null
     adb wait-for-online remount
-    if (adb shell getprop org.pixelexperience.device | grep -q "$CUSTOM_BUILD");
+    if (adb shell getprop ro.doraemon.device | grep -q "$CUSTOM_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
