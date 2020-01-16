@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     LawnConf
 	
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.vendor.overlay.theme=com.cos.overlay.lawnconf
+    ro.boot.vendor.overlay.theme=com.doraemon.overlay.lawnconf
 	
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
